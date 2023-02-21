@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Salas Kwitter</title>
+    <script src="https://www.gstatic.com/firebasejs/6.3.4/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.3.0/firebase-database.js"></script>
+
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+<link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+<body onload="carregar()">
+
+
+<div class="container">
+	<!--Cria o botão que desloga o usuário -->
+	
+	<center>
+		<h1  class="header">	
+			Kwitter	
+			<sup>
+				<img src="m2.png">
+			</sup>
+		</h1>
+		<!--Esse elemento serve para exibir o nome do usuário -->
+		<h3 id="userName" class="color_white"></h3>
+
+		<div class="form-group input_div_room_page">
+			<label>#Adicionar Sala:</label>
+			<!--caixa de texto para o usuário escrever o nome da sala-->
+			<input type="text" id="roomName" class="form-control" placeholder="#Nome da Sala">		
+		</div>
+
+		<!--Esse botão permite adicionar o nome da sala no banco de dados-->
+		<button onclick="addSala();" class="btn btn-success">#Adicionar Sala</button>
+
+		<h3 class="color_white">#SALASTRENDING</h3>
+			<div id="output"></div>
+		
+	</center>
+</div>
+
+
+<script src="kwitterRoom.js"></script>
+</body>
+</html>
